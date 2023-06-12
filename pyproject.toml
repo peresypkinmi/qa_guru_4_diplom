@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "qa-guru-4-diplom"
+version = "0.1.0"
+description = ""
+authors = ["peresypkinmi <peresypkin.ma@sibvaleo.com>"]
+readme = "README.md"
+packages = [{include = "qa_guru_4_diplom"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
