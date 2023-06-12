@@ -8,6 +8,8 @@ packages = [{include = "qa_guru_4_diplom"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pytest = "^7.3.2"
+allure-pytest = "^2.13.2"
 
 
 [build-system]
