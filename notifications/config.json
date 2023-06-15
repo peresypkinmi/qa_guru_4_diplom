@@ -1,0 +1,16 @@
+{
+"base": {
+    "logo": "",
+    "project": "diplom",
+    "environment": "local run",
+    "comment": "some comment",
+    "reportLink": "",
+    "language": "en",
+    "allureFolder": "allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "6003386539:AAFVp_O1S_99hQHynJScpIQaD7WptoX3o08",
+    "chat": "55410925",
+    "replyTo": ""
+  }}
