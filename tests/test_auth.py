@@ -1,3 +1,4 @@
+from time import sleep
 
 
 class TestAuth:
@@ -5,6 +6,7 @@ class TestAuth:
     def test_auth_by_contract(self):
         for i in range(10000):
             s = i
+        sleep(5)
         assert s == 9999
 
 
