@@ -9,6 +9,7 @@ class TestAuth:
         step.open_auth_page()
         step.fill_auth_form()
         step.submit_auth_form()
+        step.assert_user_name()
 
 
 

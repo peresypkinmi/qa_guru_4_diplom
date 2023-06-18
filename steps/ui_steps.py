@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 
 import allure
-from selene.support.conditions import be
+from selene.support.conditions import be, have
 
 from utils import attach
 from selene.support.shared import browser, config
@@ -46,4 +46,8 @@ class UiSteps:
     def press_enter_button(self):
         browser.element(".sw-button.sign-in__button").should(be.visible).click()
         sleep(3)
+
+    @allure.step("Проверка имени пользователя после авторизации")
+    def assert_user_name(self):
+        browser.element("[data-qa='VUSERBAR_NAME']").should(have.exact_text("Testyyui Testeeoi"))
 
