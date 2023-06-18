@@ -1,13 +1,16 @@
 from time import sleep
+from steps.test_steps import Test_steps
 
 
 class TestAuth:
 
-    def test_auth_by_contract(self):
-        for i in range(10000):
-            s = i
-        sleep(5)
-        assert s == 9999
+    def test_auth_by_contract(self, set_config_browser):
+        step = Test_steps()
+        step.open_auth_page()
+        step.fill_auth_form()
+        step.submit_auth_form()
+
+
 
 
     def test_auth_by_phone(self):

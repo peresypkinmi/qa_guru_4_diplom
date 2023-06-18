@@ -250,6 +250,20 @@ files = [
 ]
 
 [[package]]
+name = "curlify"
+version = "2.2.1"
+description = "Library to convert python requests object to curl command."
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "curlify-2.2.1.tar.gz", hash = "sha256:0d3f02e7235faf952de8ef45ef469845196d30632d5838bcd5aee217726ddd6d"},
+]
+
+[package.dependencies]
+requests = "*"
+
+[[package]]
 name = "exceptiongroup"
 version = "1.1.1"
 description = "Backport of PEP 654 (exception groups)"
@@ -640,4 +654,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "b670f0d77fa9867e4389c076f2946a0cecdefa90e0f18002f2882b3f425e66eb"
+content-hash = "dbad4d6c1bdf17a4bb720936d4dd2060ac8c663c90432416d84eea6d4cf8b6b5"
