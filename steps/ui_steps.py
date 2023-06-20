@@ -71,7 +71,7 @@ class UiSteps:
 
     @allure.step("Добавление продукта в корзину")
     def add_to_cart(self, test_product):
-        browser.element("[data-qa='VCARTBUTTON_TITLE']").should(be.visible).click()
+        browser.element("[data-qa='VCARTBUTTON_TITLE']").should(be.clickable).click()
         Cart.add_product_to_cart_packages(test_product=test_product, quantity=1)
 
     @allure.step("Открыть малую корзину")
