@@ -8,9 +8,7 @@ class TestCart:
 
     @allure.tag("UI")
     @allure.title("Добавление товара в корзину без авторизации")
-    def test_add_random_product_to_cart_without_auth(self, set_config_browser):
-        load_dotenv()
-
+    def test_add_product_to_cart_without_auth(self, set_config_browser):
         step = TestSteps()
 
         step.open_main_page()
@@ -21,7 +19,7 @@ class TestCart:
 
     @allure.tag("UI-API")
     @allure.title("Добавление товара в корзину авторизованного пользователя")
-    def test_add_random_product_to_cart_with_auth(self, get_api_step, set_config_browser):
+    def test_add_product_to_cart_with_auth(self, get_api_step, set_config_browser):
         step_api = get_api_step
         step_ui = TestSteps()
 
