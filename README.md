@@ -55,7 +55,7 @@ pytest .
 
 Нажать на иконку Allure возле завершившегося процесса для просмотра отчета
 
-<p><img src="resources/screenshots/chrome_37wxhxSSAY.png" alt="Allure in Jenkins"/></p>
+<p><img src="resources/screenshots/alj.png" alt="Allure in Jenkins"/></p>
 
 
 ### <img width="6%" title="Allure" src="resources/labels/allure.png"> [Allure](https://jenkins.autotests.cloud/job/qa_guru_python_4_25/allure/)
