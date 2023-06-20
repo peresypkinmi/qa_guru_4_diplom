@@ -47,7 +47,7 @@ pytest .
 
 ```
 
-## <img width="6%" title="Jenkins" src="resources/logo/Jenkins.png"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/004-miihaNSK-diplom/)
+## <img width="6%" title="Jenkins" src="resources/label/Jenkins.png"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/004-miihaNSK-diplom/)
 Запуск тестов из Jenkins:
 Добавить проект в Jenkins и нажать кнопку "Собрать сейчас".
 
