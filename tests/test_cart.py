@@ -16,7 +16,7 @@ class TestCart:
 
         step.assert_product_availability_in_small_cart()
 
-    def test_add_random_product_to_cart_with_auth(self, get_api_step, set_debug_config):
+    def test_add_random_product_to_cart_with_auth(self, get_api_step, set_config_browser):
         step_api = get_api_step
         step_ui = TestSteps()
 
