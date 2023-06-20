@@ -8,7 +8,7 @@ class TestCart:
 
     @allure.tag("UI")
     @allure.title("Добавление товара в корзину без авторизации")
-    def test_add_product_to_cart_without_auth(self, set_config_browser):
+    def test_add_product_to_cart_without_auth(self, set_debug_config):
         step = TestSteps()
 
         step.open_main_page()

@@ -51,7 +51,11 @@ pytest .
 Запуск тестов из Jenkins:
 Добавить проект в Jenkins и нажать кнопку "Собрать сейчас".
 
+<p><img src="resources/screenshots/jenkins_screen.png" alt="Jenkins"/></p>
+
 Нажать на иконку Allure возле завершившегося процесса для просмотра отчета
+
+<p><img src="resources/screenshots/chrome_37wxhxSSAY.png" alt="Allure in Jenkins"/></p>
 
 
 ### <img width="6%" title="Allure" src="resources/logo/allure.png"> [Allure](https://jenkins.autotests.cloud/job/qa_guru_python_4_25/allure/)
