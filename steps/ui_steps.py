@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 from selene.core import query
 from selene.support.conditions import be, have
 from selene.support.shared import browser
+
+from models.cart import Cart
 from models.product import Product
 
 
@@ -70,7 +72,7 @@ class UiSteps:
     @allure.step("Добавление продукта в корзину")
     def add_to_cart(self, test_product):
         browser.element("[data-qa='VCARTBUTTON_TITLE']").should(be.visible).click()
-        Cart.add_product_to_cart(test_product, 1)
+        Cart.add_product_to_cart_packages(test_product=test_product, quantity=1)
 
     @allure.step("Открыть малую корзину")
     def open_small_cart(self):

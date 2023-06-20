@@ -32,3 +32,9 @@ class BaseSession(Session):
 
     def post(self, url, data=None, json=None, **kwargs):
         return super().post(url, json=self.json, **kwargs)
+
+    def get(self, url, entity='', **kwargs):
+        return super().get(url=f"{url}{entity}", **kwargs)
+
+    def delete(self, url, entity='', **kwargs):
+        return super().delete(url=f"{url}{entity}", **kwargs)

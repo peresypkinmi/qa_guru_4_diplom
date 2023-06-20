@@ -23,3 +23,8 @@ class ApiSteps:
     def assert_auth_user_schema(self):
         assert S(User.auth_user_schema) == self.response.json()
 
+    def get_cart(self):
+        return self.api_session.get('cart').json()['List']['Id']
+
+    def clear_cart(self):
+        self.api_session.delete('cart/', entity=self.get_cart())

@@ -57,6 +57,6 @@ class User:
                                          'IsActive': bool,
                                          'Phone': str,
                                          'CityId': int,
-                                         'Longitude': str,
-                                         'Latitude': str,
+                                         'Longitude': int,
+                                         'Latitude': int,
                                          'OraEmployeeId': int}}, extra=ALLOW_EXTRA)

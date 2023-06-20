@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from steps.test_steps import TestSteps
 import allure
 
+
 class TestCart:
 
     @allure.tag("UI")
@@ -20,11 +21,12 @@ class TestCart:
 
     @allure.tag("UI-API")
     @allure.title("Добавление товара в корзину авторизованного пользователя")
-    def test_add_random_product_to_cart_with_auth(self, get_api_step, set_debug_config):
+    def test_add_random_product_to_cart_with_auth(self, get_api_step, set_config_browser):
         step_api = get_api_step
         step_ui = TestSteps()
 
         step_api.auth_by_api()
+        step_api.clear_cart()
         step_ui.open_main_page_as_auth(step_api.api_session)
         step_ui.add_product_to_cart()
         step_ui.open_small_cart()
