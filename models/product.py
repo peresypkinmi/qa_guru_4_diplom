@@ -1,10 +1,8 @@
 from dataclasses import dataclass
-import requests
 
 
 @dataclass
 class Product:
-
     product_schema = {
         "Id": int,
         "IsActive": bool,
@@ -33,7 +31,6 @@ class Product:
         "Weight": int
     }
 
-
     NameFull: str = ''
     Price: int = ''
 
@@ -45,13 +42,3 @@ class Product:
 
     def get_price(self):
         return self.Price
-
-
-# if __name__ == "__main__":
-#     product = Product("text", 200)
-#     product2 = Product("texttt", 500)
-#
-#
-#     print(product.__dict__)
-#     print(product2.__dict__)
-#     a = 600

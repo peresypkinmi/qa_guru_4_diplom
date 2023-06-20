@@ -7,8 +7,6 @@ from dotenv import load_dotenv
 from selene.core import query
 from selene.support.conditions import be, have
 from selene.support.shared import browser
-
-from models.cart import Cart
 from models.product import Product
 
 

@@ -1,10 +1,12 @@
 from dotenv import load_dotenv
 
 from steps.test_steps import TestSteps
-
+import allure
 
 class TestCart:
 
+    @allure.tag("UI")
+    @allure.title("Добавление товара в корзину без авторизации")
     def test_add_random_product_to_cart_without_auth(self, set_config_browser):
         load_dotenv()
 
@@ -16,7 +18,9 @@ class TestCart:
 
         step.assert_product_availability_in_small_cart()
 
-    def test_add_random_product_to_cart_with_auth(self, get_api_step, set_config_browser):
+    @allure.tag("UI-API")
+    @allure.title("Добавление товара в корзину авторизованного пользователя")
+    def test_add_random_product_to_cart_with_auth(self, get_api_step, set_debug_config):
         step_api = get_api_step
         step_ui = TestSteps()
 

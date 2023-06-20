@@ -13,6 +13,8 @@ allure-pytest = "^2.13.2"
 requests = "^2.31.0"
 selene = "2.0.0b17"
 curlify = "^2.2.1"
+voluptuous = "^0.13.1"
+pytest-voluptuous = "^1.2.0"
 
 
 [build-system]

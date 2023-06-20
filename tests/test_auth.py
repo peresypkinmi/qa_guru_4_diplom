@@ -1,3 +1,7 @@
+import allure
+from pytest_voluptuous import S
+
+from models.user import User
 from steps.test_steps import TestSteps
 import os
 from dotenv import load_dotenv
@@ -5,6 +9,8 @@ from dotenv import load_dotenv
 
 class TestAuth:
 
+    @allure.tag("UI")
+    @allure.title("Авторизация по контракту")
     def test_auth_by_contract(self, set_config_browser):
         load_dotenv()
 
@@ -17,6 +23,8 @@ class TestAuth:
 
         step.assert_user_name()
 
+    @allure.tag("UI")
+    @allure.title("Авторизация по номеру телефона")
     def test_auth_by_phone(self, set_config_browser):
         step = TestSteps()
 
@@ -26,6 +34,8 @@ class TestAuth:
 
         step.assert_user_name()
 
+    @allure.tag("UI")
+    @allure.title("Попытка авторизации с неверным паролем")
     def test_auth_by_contract_with_wrong_password(self, set_config_browser):
         load_dotenv()
 
@@ -37,3 +47,12 @@ class TestAuth:
         step.submit_auth_form()
 
         step.assert_error_snack_bar()
+
+    @allure.tag("API")
+    @allure.title("Проверка схемы ответа авторизации")
+    def test_auth_api(self, get_api_step):
+        api_step = get_api_step
+
+        api_step.auth_by_api()
+
+        assert S(User.auth_user_schema) == api_step.response.json()
