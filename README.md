@@ -58,17 +58,16 @@ pytest .
 <p><img src="resources/screenshots/chrome_37wxhxSSAY.png" alt="Allure in Jenkins"/></p>
 
 
-### <img width="6%" title="Allure" src="resources/logo/allure.png"> [Allure](https://jenkins.autotests.cloud/job/qa_guru_python_4_25/allure/)
+### <img width="6%" title="Allure" src="resources/labels/allure.png"> [Allure](https://jenkins.autotests.cloud/job/qa_guru_python_4_25/allure/)
 
 #### Примеры отчетов
 
-<img src="resources/screenshots/chrome_svRy4SokZf.png" alt="Allure"/>
+<img src="resources/screenshots/allure.png" alt="Allure"/>
 
-<img src="resources/screenshots/chrome_0fD0R4DN59.png" alt="Allure"/>
 
-### <img width="6%" title="Telegram" src="resources/logo/tg.png"> Telegram
+### <img width="6%" title="Telegram" src="resources/labels/tg.png"> Telegram
 
 #### Настроена отправка отчета в Telegram
 
-<img src="resources/screenshots/Telegram_XIvtt3wAXC.png" alt="Telegram"/>
+<img src="resources/screenshots/tg.png" alt="Telegram"/>
 
