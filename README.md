@@ -51,7 +51,7 @@ pytest .
 Запуск тестов из Jenkins:
 Добавить проект в Jenkins и нажать кнопку "Собрать сейчас".
 
-<p><img src="resources/screenshots/jenkins_screen.png" alt="Jenkins"/></p>
+<p><img src="resources/screenshots/jenkins_screen.jpg" alt="Jenkins"/></p>
 
 Нажать на иконку Allure возле завершившегося процесса для просмотра отчета
 
