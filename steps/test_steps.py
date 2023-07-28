@@ -42,3 +42,7 @@ class TestSteps(UiSteps):
     def open_main_page_as_auth(self, api_session):
         self.open_plug_page()
         self.open_main_page_with_auth(api_session)
+
+    def logout_user(self):
+        self.open_auth_user_menu()
+        self.press_exit_button()

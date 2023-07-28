@@ -10,6 +10,8 @@ from selene.support.shared import browser
 
 from models.cart import Cart
 from models.product import Product
+from selenium.webdriver.common.by import By
+from selene.support.shared.jquery_style import s
 
 
 class UiSteps:
@@ -21,6 +23,9 @@ class UiSteps:
     @allure.step("Открыть Юзер-меню")
     def open_user_menu(self):
         browser.element('.user-bar__icon').should(be.visible).click()
+
+    def open_auth_user_menu(self):
+        browser.element('[data-qa="HEADER_PROFILE"]').click()
 
     @allure.step("Переход на страницу авторизации")
     def open_login_page(self):
@@ -77,7 +82,7 @@ class UiSteps:
 
     @allure.step("Открыть малую корзину")
     def open_small_cart(self):
-        browser.element("div[class='cart-bar__icon']").should(be.visible).click()
+        browser.element('div[class="cart-bar__icon-container"]').click()
 
     @allure.step("Проверка наличия продукта в корзине")
     def assert_product_availability_in_small_cart(self):
@@ -98,3 +103,15 @@ class UiSteps:
     def open_main_page_with_auth(self, session):
         browser.driver.add_cookie({'name': 'token', 'value': session.headers['token']})
         browser.open('')
+
+    @allure.step('...')
+    def press_exit_button(self):
+        browser.element('div[data-frontend-logout-reload]').click()
+
+    @allure.step('...')
+    def package_mode(self):
+        browser.driver.find_element(by='XPATH', value='*//div[@class="package-switch"]/label').click()
+
+    @allure.step('...')
+    def small_cart(self):
+        browser.element('div[class="cart-button__content"]').click()

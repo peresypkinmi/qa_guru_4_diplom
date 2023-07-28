@@ -1,3 +1,5 @@
+import time
+
 from dotenv import load_dotenv
 
 from steps.test_steps import TestSteps
@@ -30,3 +32,16 @@ class TestCart:
         step_ui.open_small_cart()
 
         step_ui.assert_product_availability_in_small_cart()
+
+    def test_test(self, get_api_step):
+        api_step = get_api_step
+        api_step.auth_by_api()
+        api_step.add_random_product_to_cart()
+        assert 2==2
+
+    def test_remove_product(self, get_api_step):
+        api_step = get_api_step
+        api_step.auth_by_api()
+        api_step.add_random_product_to_cart()
+        time.sleep(3)
+        api_step.remove_product()
